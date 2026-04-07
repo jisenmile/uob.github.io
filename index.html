@@ -1,20 +1,1163 @@
-<!doctype html>
-<html lang="zh-Hans">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/uob.github.io/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <title>UOB Kay Hian — Serious about investing</title>
-    <script type="module" crossorigin src="/uob.github.io/assets/index-CQ_R5lxJ.js"></script>
-    <link rel="stylesheet" crossorigin href="/uob.github.io/assets/index-Damt5PTY.css">
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indonesia Investment Education Center</title>
+  <style>
+    :root {
+      --navy: #0b1736;
+      --navy-2: #122451;
+      --gold: #c7a96b;
+      --gold-soft: #e8dcc4;
+      --text: #1c2333;
+      --muted: #61708b;
+      --line: rgba(15, 31, 67, 0.12);
+      --bg: #f5f7fb;
+      --white: #ffffff;
+      --shadow: 0 20px 60px rgba(11, 23, 54, 0.10);
+      --radius: 22px;
+      --max: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f7f8fb 0%, #eef2f9 100%);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: linear-gradient(90deg, #7a0f1a, #a31621);
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 13px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 42px;
+      gap: 20px;
+    }
+
+    .topbar-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(122, 15, 26, 0.95);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 78px;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: white;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--gold), #f3e6ce);
+      color: var(--navy);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 16px;
+      box-shadow: 0 10px 26px rgba(199, 169, 107, 0.24);
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 16px;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.72);
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 14px;
+      align-items: center;
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold), #e9d9b8);
+      color: var(--navy);
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 12px 30px rgba(199, 169, 107, 0.24);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), transparent 24%),
+        radial-gradient(circle at 85% 30%, rgba(0, 0, 0, 0.12), transparent 22%),
+        linear-gradient(135deg, #7a0f1a 0%, #a31621 48%, #c51f2a 100%);
+      color: white;
+      padding: 90px 0 54px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 -1px 0;
+      height: 90px;
+      background: linear-gradient(to bottom right, transparent 49%, #f5f7fb 50%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(38px, 5vw, 66px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      max-width: 760px;
+    }
+
+    .hero h1 span {
+      color: #f2dfb5;
+    }
+
+    .hero p {
+      margin: 24px 0 0;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 700px;
+    }
+
+    .hero-actions {
+      margin-top: 32px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), #f1dfba);
+      color: var(--navy);
+      box-shadow: 0 16px 35px rgba(199, 169, 107, 0.24);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .hero-points {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 760px;
+    }
+
+    .hero-point {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 14px;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-card {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.22);
+    }
+
+    .hero-card img {
+      aspect-ratio: 0.92 / 1;
+      object-fit: cover;
+    }
+
+    .hero-badge {
+      position: absolute;
+      left: -20px;
+      bottom: 34px;
+      background: white;
+      color: var(--navy);
+      border-radius: 22px;
+      padding: 18px 18px;
+      width: 260px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-badge strong {
+      display: block;
+      font-size: 16px;
+    }
+
+    .hero-badge span {
+      display: block;
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .stats-strip {
+      margin-top: -18px;
+      position: relative;
+      z-index: 4;
+    }
+
+    .stats-panel {
+      background: white;
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      padding: 26px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .stat {
+      padding: 8px 10px;
+      border-right: 1px solid var(--line);
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 32px;
+      color: var(--navy);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat span {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .section {
+      padding: 86px 0;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 32px;
+    }
+
+    .section-head .tag {
+      display: inline-block;
+      color: #8b6a2b;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.12;
+      color: var(--navy);
+      letter-spacing: -0.03em;
+    }
+
+    .section-head p {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: white;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 34px;
+    }
+
+    .panel h3 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      color: var(--navy);
+    }
+
+    .panel p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .adv-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .adv-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .adv-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .adv-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(199, 169, 107, 0.22), rgba(199, 169, 107, 0.08));
+      color: #8b6a2b;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      flex: none;
+    }
+
+    .adv-copy strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    .adv-copy span {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .success-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .success-card {
+      background: linear-gradient(180deg, white 0%, #fcfbf7 100%);
+      border: 1px solid rgba(199, 169, 107, 0.20);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .success-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .success-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .quote-panel {
+      margin-top: 26px;
+      background: linear-gradient(135deg, var(--navy) 0%, #17306b 100%);
+      color: white;
+      border-radius: 28px;
+      padding: 30px 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .quote-panel p {
+      margin: 0;
+      font-size: clamp(20px, 2.2vw, 28px);
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      min-height: 260px;
+    }
+
+    .service-no {
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      line-height: 1.3;
+      color: var(--navy);
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr 0.9fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .team-card {
+      overflow: hidden;
+      background: white;
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .team-card img {
+      height: 380px;
+      object-fit: cover;
+    }
+
+    .team-content {
+      padding: 24px 24px 28px;
+    }
+
+    .team-role {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #8b6a2b;
+    }
+
+    .team-card h3 {
+      margin: 0;
+      font-size: 28px;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    .team-card h4 {
+      margin: 8px 0 14px;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .team-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .team-card ul {
+      margin: 18px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .team-card.featured img {
+      height: 460px;
+    }
+
+    .journey-wrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .journey-step {
+      background: white;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .journey-step::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), #e5d1aa);
+    }
+
+    .journey-step strong {
+      display: block;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #8b6a2b;
+      margin-bottom: 14px;
+    }
+
+    .journey-step h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.3;
+      color: var(--navy);
+    }
+
+    .journey-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .contact {
+      background: linear-gradient(135deg, #0a1635 0%, #112657 52%, #17306b 100%);
+      color: white;
+      padding: 90px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 20%, rgba(199, 169, 107, 0.22), transparent 18%), radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.06), transparent 20%);
+      pointer-events: none;
+    }
+
+    .contact-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .contact-copy h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1.12;
+    }
+
+    .contact-copy p {
+      margin: 18px 0 0;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.9;
+      max-width: 680px;
+    }
+
+    .contact-box {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+      padding: 28px;
+      backdrop-filter: blur(14px);
+    }
+
+    .contact-item {
+      display: block;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin-top: 14px;
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 15px;
+      color: white;
+    }
+
+    .contact-item span {
+      display: block;
+      margin-top: 6px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .footer {
+      background: #091129;
+      color: rgba(255, 255, 255, 0.68);
+      padding: 24px 0 34px;
+      font-size: 13px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .footer .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1100px) {
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .team-grid,
+      .services-grid,
+      .journey-wrap,
+      .success-grid,
+      .stats-panel {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .team-card.featured {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .team-grid,
+      .services-grid,
+      .journey-wrap,
+      .success-grid,
+      .stats-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-points {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-badge {
+        position: static;
+        margin-top: 16px;
+        width: auto;
+      }
+
+      .stat {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 16px;
+      }
+
+      .stat:last-child {
+        border-bottom: 0;
+      }
+
+      .team-card.featured {
+        grid-column: auto;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .hero {
+        padding-top: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar-links">
+    <a href="#about">About</a>
+    <a href="#advantages">Advantages</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </div>
+  </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="brand">
+        <div class="brand-mark"
+          style="background:#e5483b;border-radius:14px;display:flex;align-items:center;justify-content:center;">
+          <div style="width:26px;height:20px;background:white;border-radius:0 0 14px 14px;position:relative;">
+            <div
+              style="position:absolute;top:-6px;left:50%;transform:translateX(-50%);width:10px;height:10px;background:#e5483b;border-radius:50%;">
+            </div>
+          </div>
+        </div>
+        <div class="brand-text">
+          <strong style="font-weight:700;letter-spacing:0.02em;">UOB Kay Hian</strong>
+          <span>Indonesia Investment Education Center</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#about">关于我们</a>
+        <a href="#global-success">全球成功案例</a>
+        <a href="#services">课程体系</a>
+        <a href="#team">教师团队</a>
+        <a href="#journey">学习流程</a>
+        <a class="nav-cta" href="#contact">立即联系</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Institutional Approach · Indonesia Equity Market · Research & Training</div>
+        <h1>面向全球投资者的印尼股票教学与投资认知体系</h1>
+        <p>
+          聚焦印尼股票市场，通过本地市场经验、区域研究框架与系统化教学路径，帮助投资者建立清晰、可执行的分析方法与决策能力。
+        </p>
+
+        <div class="hero-points">
+          <div class="hero-point">已形成可复制的教学与服务体系，适用于不同地区投资者</div>
+          <div class="hero-point">从基础认知到实战理解，构建循序渐进的学习路径</div>
+          <div class="hero-point">清晰分工的团队服务体系，保障学习与沟通效率</div>
+          <div class="hero-point">以长期陪伴与持续价值输出为核心的服务模式</div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <img src="/mnt/data/550070d8-20db-49b7-aed5-3515ba5cc4d3.png" alt="Stephanus Turangan" />
+        </div>
+        <div class="hero-badge">
+          <strong>Stephanus Turangan</strong>
+          <span>首席讲师与核心导师，深耕印尼金融市场，负责课程核心框架、市场逻辑与高阶分析内容。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-strip">
+    <div class="container">
+      <div class="stats-panel">
+        <div class="stat">
+          <strong>Market Focus</strong><span>深耕印尼资本市场，围绕真实市场环境建立教学体系。</span>
+        </div>
+        <div class="stat">
+          <strong>Team Structure</strong><span>讲师与助理协同服务，确保沟通顺畅与学习连续性。</span>
+        </div>
+        <div class="stat">
+          <strong>Global Reach</strong><span>服务不同地区投资者，具备跨区域沟通与教学经验。</span>
+        </div>
+        <div class="stat">
+          <strong>Learning System</strong><span>从认知建立到方法形成的完整学习路径。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">About Us</span>
+        <h2>基于印尼市场的系统化投资教学与服务体系</h2>
+        <p>
+          以清晰结构与专业内容呈现，帮助投资者快速理解市场逻辑、学习路径与服务方式。
+        </p>
+      </div>
+      <div class="about-grid">
+        <div class="panel">
+          <h3>我们的定位</h3>
+          <p>
+            UOB 体系下，专注印尼股票市场教学与投资认知建立，结合本地市场经验与区域研究框架，构建系统化、可执行的学习与分析体系。
+          </p>
+          <div class="adv-list">
+            <div class="adv-item">
+              <div class="adv-icon">01</div>
+              <div class="adv-copy">
+                <strong>市场基础</strong><span>以印尼市场经验与研究框架为核心，建立清晰的学习起点。</span>
+              </div>
+            </div>
+            <div class="adv-item">
+              <div class="adv-icon">02</div>
+              <div class="adv-copy">
+                <strong>体系结构</strong><span>通过结构化内容与清晰路径，让学习过程更可理解、更可执行。</span>
+              </div>
+            </div>
+            <div class="adv-item">
+              <div class="adv-icon">03</div>
+              <div class="adv-copy">
+                <strong>长期价值</strong><span>强调持续学习与能力提升，而非短期信息获取。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel" id="advantages">
+          <h3>我们的优势</h3>
+          <div class="adv-list">
+            <div class="adv-item">
+              <div class="adv-icon">A</div>
+              <div class="adv-copy">
+                <strong>可复制的教学体系</strong><span>通过结构化教学与服务流程，形成稳定、可持续的学习模式。</span>
+              </div>
+            </div>
+            <div class="adv-item">
+              <div class="adv-icon">B</div>
+              <div class="adv-copy">
+                <strong>分层学习路径</strong><span>覆盖从基础认知到进阶分析的不同阶段需求。</span>
+              </div>
+            </div>
+            <div class="adv-item">
+              <div class="adv-icon">C</div>
+              <div class="adv-copy">
+                <strong>稳定服务体系</strong><span>通过明确分工与持续支持，保障学习体验与沟通效率。</span>
+              </div>
+            </div>
+            <div class="adv-item">
+              <div class="adv-icon">D</div>
+              <div class="adv-copy">
+                <strong>清晰认知与信任建立</strong><span>让投资者快速理解团队背景、服务内容与合作方式。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="global-success">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Global Success</span>
+        <h2>全球多个地区已有成熟教学与服务成功案例</h2>
+        <p>
+          一句话概括：<strong>我们不仅懂市场，更懂如何把投资教育做成能被信任、能被接受、能持续产生价值的服务体系。</strong>
+        </p>
+      </div>
+      <div class="success-grid">
+        <div class="success-card">
+          <strong>区域化教学经验</strong>
+          <p>不同市场的投资者，在认知、习惯和沟通方式上存在差异。我们通过不断优化教学结构与接待方式，让不同地区的新客户都能更快进入状态。</p>
+        </div>
+        <div class="success-card">
+          <strong>认知建立与信任转化路径</strong>
+          <p>围绕投资者初次接触市场时的认知习惯与决策心理，通过清晰的信息结构与稳定的沟通方式，让客户在理解中建立信任，在信任中逐步进入学习体系。</p>
+        </div>
+        <div class="success-card">
+          <strong>高端品牌表达能力</strong>
+          <p>通过专业视觉、团队展示、清晰文案与高质感页面布局，让客户看到的不只是课程，而是一个值得长期接触的专业团队。</p>
+        </div>
+      </div>
+      <div class="quote-panel">
+        <p>我们相信，真正能够建立长期信任的，不只是“会讲市场”，而是让客户在第一时间感知专业实力、服务体系与团队价值，并愿意持续深入了解与合作。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Our Services</span>
+        <h2>围绕学习、理解、分析与陪伴而建立的课程体系</h2>
+        <p>
+          本页面呈现的，不仅是团队信息，更是我们所提供的完整服务与学习框架。每一项内容均围绕一个核心：让投资者清晰理解我们的能力边界、服务方式与合作路径，从而在理性判断下做出更具确定性的选择。
+        </p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-no">Service 01</div>
+          <h3>基础认知教学</h3>
+          <p>帮助新手了解印尼股票市场基础结构、板块逻辑、市场规则与常见投资误区，让客户从一开始就走在正确方向上。</p>
+        </div>
+        <div class="service-card">
+          <div class="service-no">Service 02</div>
+          <h3>市场资讯与分析</h3>
+          <p>结合市场动态、行业主题与个股逻辑输出更有价值的内容，让客户看到的不只是信息，而是可理解、可吸收的分析框架。</p>
+        </div>
+        <div class="service-card">
+          <div class="service-no">Service 03</div>
+          <h3>进阶方法训练</h3>
+          <p>面向希望进一步提升判断力的学员，帮助他们从“听别人说”过渡到“自己能够看懂市场”。</p>
+        </div>
+        <div class="service-card">
+          <div class="service-no">Service 04</div>
+          <h3>团队式服务支持</h3>
+          <p>通过讲师、主助理与辅助助理的协同服务，让每一位进入体系的客户都能获得更连续、更有人情味的学习体验。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Professional Team</span>
+        <h2>专业团队构成，构建稳定且可信的服务体系</h2>
+        <p>
+          我们通过清晰的团队结构与明确的职责分工，确保每一位投资者在学习过程中都能获得稳定、连续且高质量的支持。
+          从专业讲师的市场解析，到助理团队的沟通与服务承接，每一个环节都围绕“专业输出与服务体验”协同运作，
+          让投资者在理解市场的同时，也建立对团队的长期信任。
+        </p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card featured">
+          <img src="/mnt/data/934ef54f-8eb4-4422-8f80-af8f5b5b5b96.png" alt="Stephanus Turangan" />
+          <div class="team-content">
+            <span class="team-role">Lead Mentor</span>
+            <h3>STEPHANUS TURANGAN</h3>
+            <h4>首席讲师 / 首席导师</h4>
+            <p>
+              Stephanus Turangan 拥有超过 30 年印尼金融市场经验，长期深耕资本市场、机构业务与投资策略领域。
+              他的专业背景、区域经验与管理经历，能够为整个教学体系提供更强的市场逻辑支撑与专业背书。
+            </p>
+            <ul>
+              <li>拥有印尼金融市场长期实战与管理经验</li>
+              <li>负责课程主线、核心分析与高阶市场框架</li>
+              <li>帮助学员建立更完整的投资认知与判断逻辑</li>
+            </ul>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="/mnt/data/e0ce309a-ee53-4b10-a35a-c771e90f41fe.png" alt="Raina Putri Ananda" />
+          <div class="team-content">
+            <span class="team-role">Primary Assistant</span>
+            <h3>RAINA PUTRI ANANDA</h3>
+            <h4>主助理 / 客户经理</h4>
+            <p>
+              Raina 负责客户接待、日常沟通、学习规划与后续跟进。她是客户进入体系后最先接触到的重要角色，负责把服务做得更细致、更顺畅、更有温度。
+            </p>
+            <ul>
+              <li>负责主要客户对接与沟通安排</li>
+              <li>协助新客户了解课程与学习路径</li>
+              <li>增强社群陪伴感与服务连续性</li>
+            </ul>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="/mnt/data/63fa69dc-3967-49da-90f3-a07b41f113f3.png" alt="Fajar Mahendra" />
+          <div class="team-content">
+            <span class="team-role">Support Assistant</span>
+            <h3>FAJAR MAHENDRA</h3>
+            <h4>辅助助理 / 运营支持</h4>
+            <p>
+              Fajar 负责协助日常运营、信息整理与学员支持，帮助整个服务流程保持流畅与高效，让客户在学习过程中获得更稳定的体验。
+            </p>
+            <ul>
+              <li>负责辅助支持与学员问题处理</li>
+              <li>帮助维持日常运营效率</li>
+              <li>配合主助理完成服务闭环</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="journey">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Learning Journey</span>
+        <h2>结构清晰的学习与服务路径，稳定推进每一步成长</h2>
+        <p>
+          我们以清晰的阶段划分与稳定的服务衔接，帮助每一位进入体系的学员，从认知建立到方法形成，逐步完成对市场的理解与应用。
+        </p>
+      </div>
+      <div class="journey-wrap">
+        <div class="journey-step">
+          <strong>Step 01</strong>
+          <h3>了解团队与体系</h3>
+          <p>在进入之初，先全面了解团队背景、研究方向与服务结构，建立对整体框架的清晰认知。</p>
+        </div>
+        <div class="journey-step">
+          <strong>Step 02</strong>
+          <h3>专业对接与评估</h3>
+          <p>由助理团队进行初步沟通与情况了解，根据不同基础与目标，提供匹配的学习路径与安排。</p>
+        </div>
+        <div class="journey-step">
+          <strong>Step 03</strong>
+          <h3>进入系统化学习</h3>
+          <p>围绕市场结构、分析逻辑与实战理解展开，由浅入深建立完整的投资认知与判断能力。</p>
+        </div>
+        <div class="journey-step">
+          <strong>Step 04</strong>
+          <h3>持续跟进与深化</h3>
+          <p>通过讲师内容输出与团队支持，持续优化理解与方法，逐步形成稳定且可执行的交易思路。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-copy">
+        <div class="eyebrow" style="margin-bottom:18px;">Contact Our Team</div>
+        <h2>现在就和我们联系，开启你的印尼股票学习之路</h2>
+        <p>
+          如果你正在寻找一个更专业、更清晰、更值得信任的印尼股票教学平台，
+          欢迎直接联系我们的团队。无论你是刚开始了解市场，还是已经有一定基础，
+          我们都会根据你的情况，为你提供更合适的学习方向与沟通安排。
+        </p>
+
+      </div>
+      <div class="contact-box">
+        <h3 style="margin:0 0 14px;font-size:24px;">官方沟通通道</h3>
+        <p style="margin:0;color:rgba(255,255,255,0.72);font-size:14px;line-height:1.8;">
+          所有沟通均由专业团队统一管理与响应，确保信息准确、服务稳定、沟通高效。
+          建议通过官方渠道直接对接，我们将为你提供清晰的学习方向与后续安排。
+        </p>
+        <div class="hero-actions" style="margin-top:20px;">
+          <a class="btn btn-primary" href="https://wa.me/6281234567890">WhatsApp 官方咨询通道</a>
+          <a class="btn btn-secondary" href="mailto:aseancapitallab@gmail.com">📧 官方邮箱（Gmail）</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© 2026 ASEAN Capital Lab · Indonesia Investment Education Center</div>
+      <div>Systematic Investment Education · Market-Based Approach · Research-Driven Insight · Long-Term Value
+        Creation</div>
+    </div>
+    <section style="background:#0b1736;padding:40px 0;border-top:1px solid rgba(255,255,255,0.08);">
+      <div class="container"
+        style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:40px;opacity:0.85;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/IDX_Indonesia_Stock_Exchange_logo.svg"
+          style="height:36px;object-fit:contain;" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/KPEI_logo.png"
+          style="height:34px;object-fit:contain;" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/KSEI_logo.png"
+          style="height:34px;object-fit:contain;" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/OJK_Logo.svg"
+          style="height:36px;object-fit:contain;" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_BNI_logo.svg"
+          style="height:32px;object-fit:contain;" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Bank_BRI_logo.svg"
+          style="height:32px;object-fit:contain;" />
+      </div>
+    </section>
+
+  </footer>
+</body>
+
 </html>
