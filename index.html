@@ -670,24 +670,39 @@
     }
 
     .institutions-scroll {
+      overflow: hidden;
+      padding: 6px 2px 12px;
+    }
+
+    .institutions-track {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: max-content;
+      animation: institutions-marquee 24s linear infinite;
+    }
+
+    .institutions-scroll:hover .institutions-track {
+      animation-play-state: paused;
+    }
+
+    .institutions-group {
       display: flex;
       gap: 12px;
-      overflow-x: auto;
-      padding: 6px 2px 12px;
-      scroll-snap-type: x proximity;
-      -webkit-overflow-scrolling: touch;
     }
 
-    .institutions-scroll::-webkit-scrollbar {
-      height: 8px;
-    }
+    @keyframes institutions-marquee {
+      from {
+        transform: translateX(0);
+      }
 
-    .institutions-scroll::-webkit-scrollbar-thumb {
-      background: rgba(9, 17, 41, 0.2);
-      border-radius: 999px;
+      to {
+        transform: translateX(calc(-1 * (6 * 220px + 6 * 12px)));
+      }
     }
 
     .institution-item {
+      width: 220px;
       flex: 0 0 220px;
       height: 94px;
       background: white;
@@ -697,7 +712,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      scroll-snap-align: start;
       padding: 16px 20px;
     }
 
@@ -838,11 +852,6 @@
 
       .institutions {
         padding: 8px 0 72px;
-      }
-
-      .institution-item {
-        flex-basis: 200px;
-        height: 88px;
       }
 
       .hero-badge {
@@ -1207,23 +1216,47 @@
     <div class="container">
       <h2>覆盖印尼股票交易、监管与资金体系的核心机构</h2>
       <div class="institutions-scroll">
-        <div class="institution-item">
-          <img src="./ad/01.jpg" alt="IDX Indonesia Stock Exchange" />
-        </div>
-        <div class="institution-item">
-          <img src="./ad/02.jpg" alt="KPEI" />
-        </div>
-        <div class="institution-item">
-          <img src="./ad/03.jpg" alt="KSEI" />
-        </div>
-        <div class="institution-item">
-          <img src="./ad/04.jpg" alt="Bank BRI" />
-        </div>
-        <div class="institution-item">
-          <img src="./ad/05.jpg" alt="Bank BNI" />
-        </div>
-        <div class="institution-item">
-          <img src="./ad/06.jpg" alt="OJK Indonesia" />
+        <div class="institutions-track">
+          <div class="institutions-group">
+            <div class="institution-item">
+              <img src="./ad/01.jpg" alt="IDX Indonesia Stock Exchange" />
+            </div>
+            <div class="institution-item">
+              <img src="./ad/02.jpg" alt="KPEI" />
+            </div>
+            <div class="institution-item">
+              <img src="./ad/03.jpg" alt="KSEI" />
+            </div>
+            <div class="institution-item">
+              <img src="./ad/04.jpg" alt="Bank BRI" />
+            </div>
+            <div class="institution-item">
+              <img src="./ad/05.jpg" alt="Bank BNI" />
+            </div>
+            <div class="institution-item">
+              <img src="./ad/06.jpg" alt="OJK Indonesia" />
+            </div>
+          </div>
+          <div class="institutions-group" aria-hidden="true">
+            <div class="institution-item">
+              <img src="./ad/01.jpg" alt="" />
+            </div>
+            <div class="institution-item">
+              <img src="./ad/02.jpg" alt="" />
+            </div>
+            <div class="institution-item">
+              <img src="./ad/03.jpg" alt="" />
+            </div>
+            <div class="institution-item">
+              <img src="./ad/04.jpg" alt="" />
+            </div>
+            <div class="institution-item">
+              <img src="./ad/05.jpg" alt="" />
+            </div>
+            <div class="institution-item">
+              <img src="./ad/06.jpg" alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
