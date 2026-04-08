@@ -333,6 +333,25 @@
       color: var(--muted);
     }
 
+    .feature-media {
+      padding: 24px 0 8px;
+    }
+
+    .feature-media .media-frame {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      /* border: 1px solid var(--line); */
+      /* background: #000; */
+    }
+
+    .feature-media video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+
     .section {
       padding: 86px 0;
     }
@@ -760,6 +779,10 @@
         grid-template-columns: 1fr;
       }
 
+      .feature-media {
+        padding: 18px 0 0;
+      }
+
       .hero-badge {
         position: static;
         margin-top: 16px;
@@ -847,7 +870,7 @@
       </div>
       <div class="hero-visual">
         <div class="hero-card">
-          <img src="/mnt/data/550070d8-20db-49b7-aed5-3515ba5cc4d3.png" alt="Stephanus Turangan" />
+          <img src="./01.png" alt="Stephanus Turangan" />
         </div>
         <div class="hero-badge">
           <strong>Stephanus Turangan</strong>
@@ -872,6 +895,17 @@
         <div class="stat">
           <strong>Learning System</strong><span>从认知建立到方法形成的完整学习路径。</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-media" aria-label="Market overview video">
+    <div class="container">
+      <div class="media-frame">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="01.mp4" type="video/mp4" />
+          您的浏览器不支持 HTML5 视频播放。
+        </video>
       </div>
     </div>
   </section>
@@ -1021,7 +1055,7 @@
       </div>
       <div class="team-grid">
         <div class="team-card featured">
-          <img src="/mnt/data/934ef54f-8eb4-4422-8f80-af8f5b5b5b96.png" alt="Stephanus Turangan" />
+          <img src="./02.png" alt="Stephanus Turangan" />
           <div class="team-content">
             <span class="team-role">Lead Mentor</span>
             <h3>STEPHANUS TURANGAN</h3>
@@ -1038,7 +1072,7 @@
           </div>
         </div>
         <div class="team-card">
-          <img src="/mnt/data/e0ce309a-ee53-4b10-a35a-c771e90f41fe.png" alt="Raina Putri Ananda" />
+          <img src="./03.png" alt="Raina Putri Ananda" />
           <div class="team-content">
             <span class="team-role">Primary Assistant</span>
             <h3>RAINA PUTRI ANANDA</h3>
@@ -1054,7 +1088,7 @@
           </div>
         </div>
         <div class="team-card">
-          <img src="/mnt/data/63fa69dc-3967-49da-90f3-a07b41f113f3.png" alt="Fajar Mahendra" />
+          <img src="./04.png" alt="Fajar Mahendra" />
           <div class="team-content">
             <span class="team-role">Support Assistant</span>
             <h3>FAJAR MAHENDRA</h3>
