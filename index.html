@@ -656,6 +656,59 @@
       line-height: 1.75;
     }
 
+    .institutions {
+      padding: 10px 0 90px;
+    }
+
+    .institutions h2 {
+      margin: 0 0 26px;
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.12;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      max-width: 860px;
+    }
+
+    .institutions-scroll {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding: 6px 2px 12px;
+      scroll-snap-type: x proximity;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .institutions-scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .institutions-scroll::-webkit-scrollbar-thumb {
+      background: rgba(9, 17, 41, 0.2);
+      border-radius: 999px;
+    }
+
+    .institution-item {
+      flex: 0 0 220px;
+      height: 94px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      scroll-snap-align: start;
+      padding: 16px 20px;
+    }
+
+    .institution-item img {
+      max-width: 100%;
+      max-height: 46px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
     .contact {
       background: linear-gradient(135deg, #0a1635 0%, #112657 52%, #17306b 100%);
       color: white;
@@ -781,6 +834,15 @@
 
       .feature-media {
         padding: 18px 0 0;
+      }
+
+      .institutions {
+        padding: 8px 0 72px;
+      }
+
+      .institution-item {
+        flex-basis: 200px;
+        height: 88px;
       }
 
       .hero-badge {
@@ -1136,6 +1198,32 @@
           <strong>Step 04</strong>
           <h3>持续跟进与深化</h3>
           <p>通过讲师内容输出与团队支持，持续优化理解与方法，逐步形成稳定且可执行的交易思路。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="institutions" aria-label="Key Indonesia financial institutions">
+    <div class="container">
+      <h2>覆盖印尼股票交易、监管与资金体系的核心机构</h2>
+      <div class="institutions-scroll">
+        <div class="institution-item">
+          <img src="./ad/01.jpg" alt="IDX Indonesia Stock Exchange" />
+        </div>
+        <div class="institution-item">
+          <img src="./ad/02.jpg" alt="KPEI" />
+        </div>
+        <div class="institution-item">
+          <img src="./ad/03.jpg" alt="KSEI" />
+        </div>
+        <div class="institution-item">
+          <img src="./ad/04.jpg" alt="Bank BRI" />
+        </div>
+        <div class="institution-item">
+          <img src="./ad/05.jpg" alt="Bank BNI" />
+        </div>
+        <div class="institution-item">
+          <img src="./ad/06.jpg" alt="OJK Indonesia" />
         </div>
       </div>
     </div>
