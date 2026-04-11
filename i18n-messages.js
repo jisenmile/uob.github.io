@@ -187,7 +187,7 @@
     about_title:
       "A systematic investment education and service framework for the Indonesia market",
     about_lead:
-      "Clear structure and professional content help investors quickly grasp market logic, learning paths, and how we work.",
+      "Clarity in structure and professionalism in content allow investors to efficiently comprehend market trends, learning processes, and how we operate",
     about_pos_title: "Who we are",
     about_pos_body:
       "Within the UOB ecosystem, we specialize in Indonesia equity education and investment literacy—combining local market experience with a regional research framework to build a systematic, actionable learning and analysis system.",
