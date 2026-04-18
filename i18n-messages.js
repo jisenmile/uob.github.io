@@ -1,152 +1,8 @@
 /**
- * 全站文案：按语言分对象，修改对应字段即可。
- * 页面通过 data-i18n="键名" 绑定；切换语言时读取 I18N_MESSAGES[lang][键名]。
+ * Site copy by language. Keys match data-i18n attributes on the page.
  */
 (function (global) {
   "use strict";
-
-  /** @type {Record<string, string>} */
-  var ZH_CN = {
-    lang_label: "语言",
-    nav_about: "关于我们",
-    nav_global: "全球成功案例",
-    nav_services: "课程体系",
-    nav_team: "教师团队",
-    nav_journey: "学习流程",
-    nav_cta: "立即联系",
-    brand_subline: "Indonesia Investment Education Center",
-    hero_eyebrow:
-      "Institutional Approach · Indonesia Equity Market · Research & Training",
-    hero_title: "面向全球投资者的印尼股票教学与投资认知体系",
-    hero_intro:
-      "聚焦印尼股票市场，通过本地市场经验、区域研究框架与系统化教学路径，帮助投资者建立清晰、可执行的分析方法与决策能力。",
-    hero_b1: "已形成可复制的教学与服务体系，适用于不同地区投资者",
-    hero_b2: "从基础认知到实战理解，构建循序渐进的学习路径",
-    hero_b3: "清晰分工的团队服务体系，保障学习与沟通效率",
-    hero_b4: "以长期陪伴与持续价值输出为核心的服务模式",
-    stat_mf_title: "Market Focus",
-    stat_mf_desc: "深耕印尼资本市场，围绕真实市场环境建立教学体系。",
-    stat_ts_title: "Team Structure",
-    stat_ts_desc: "讲师与助理协同服务，确保沟通顺畅与学习连续性。",
-    stat_gr_title: "Global Reach",
-    stat_gr_desc: "服务不同地区投资者，具备跨区域沟通与教学经验。",
-    stat_ls_title: "Learning System",
-    stat_ls_desc: "从认知建立到方法形成的完整学习路径。",
-    video_nosupport: "您的浏览器不支持 HTML5 视频播放。",
-    about_tag: "About Us",
-    about_title: "基于印尼市场的系统化投资教学与服务体系",
-    about_lead:
-      "以清晰结构与专业内容呈现，帮助投资者快速理解市场逻辑、学习路径与服务方式。",
-    about_pos_title: "我们的定位",
-    about_pos_body:
-      "UOB 体系下，专注印尼股票市场教学与投资认知建立，结合本地市场经验与区域研究框架，构建系统化、可执行的学习与分析体系。",
-    about_f1t: "市场基础",
-    about_f1s: "以印尼市场经验与研究框架为核心，建立清晰的学习起点。",
-    about_f2t: "体系结构",
-    about_f2s: "通过结构化内容与清晰路径，让学习过程更可理解、更可执行。",
-    about_f3t: "长期价值",
-    about_f3s: "强调持续学习与能力提升，而非短期信息获取。",
-    about_adv_title: "我们的优势",
-    about_a1t: "可复制的教学体系",
-    about_a1s: "通过结构化教学与服务流程，形成稳定、可持续的学习模式。",
-    about_a2t: "分层学习路径",
-    about_a2s: "覆盖从基础认知到进阶分析的不同阶段需求。",
-    about_a3t: "稳定服务体系",
-    about_a3s: "通过明确分工与持续支持，保障学习体验与沟通效率。",
-    about_a4t: "清晰认知与信任建立",
-    about_a4s: "让投资者快速理解团队背景、服务内容与合作方式。",
-    gs_tag: "Global Success",
-    gs_title: "全球多个地区已有成熟教学与服务成功案例",
-    gs_pre: "一句话概括：",
-    gs_em:
-      "我们不仅懂市场，更懂如何把投资教育做成能被信任、能被接受、能持续产生价值的服务体系。",
-    gs_c1t: "区域化教学经验",
-    gs_c1p:
-      "不同市场的投资者，在认知、习惯和沟通方式上存在差异。我们通过不断优化教学结构与接待方式，让不同地区的新客户都能更快进入状态。",
-    gs_c2t: "认知建立与信任转化路径",
-    gs_c2p:
-      "围绕投资者初次接触市场时的认知习惯与决策心理，通过清晰的信息结构与稳定的沟通方式，让客户在理解中建立信任，在信任中逐步进入学习体系。",
-    gs_c3t: "高端品牌表达能力",
-    gs_c3p:
-      "通过专业视觉、团队展示、清晰文案与高质感页面布局，让客户看到的不只是课程，而是一个值得长期接触的专业团队。",
-    gs_quote:
-      "我们相信，真正能够建立长期信任的，不只是“会讲市场”，而是让客户在第一时间感知专业实力、服务体系与团队价值，并愿意持续深入了解与合作。",
-    sv_tag: "Our Services",
-    sv_title: "围绕学习、理解、分析与陪伴而建立的课程体系",
-    sv_intro:
-      "本页面呈现的，不仅是团队信息，更是我们所提供的完整服务与学习框架。每一项内容均围绕一个核心：让投资者清晰理解我们的能力边界、服务方式与合作路径，从而在理性判断下做出更具确定性的选择。",
-    sv1no: "Service 01",
-    sv1t: "基础认知教学",
-    sv1p: "帮助新手了解印尼股票市场基础结构、板块逻辑、市场规则与常见投资误区，让客户从一开始就走在正确方向上。",
-    sv2no: "Service 02",
-    sv2t: "市场资讯与分析",
-    sv2p: "结合市场动态、行业主题与个股逻辑输出更有价值的内容，让客户看到的不只是信息，而是可理解、可吸收的分析框架。",
-    sv3no: "Service 03",
-    sv3t: "进阶方法训练",
-    sv3p: "面向希望进一步提升判断力的学员，帮助他们从“听别人说”过渡到“自己能够看懂市场”。",
-    sv4no: "Service 04",
-    sv4t: "团队式服务支持",
-    sv4p: "通过讲师、主助理与辅助助理的协同服务，让每一位进入体系的客户都能获得更连续、更有人情味的学习体验。",
-    tm_tag: "Professional Team",
-    tm_title: "专业团队构成，构建稳定且可信的服务体系",
-    tm_intro:
-      "我们通过清晰的团队结构与明确的职责分工，确保每一位投资者在学习过程中都能获得稳定、连续且高质量的支持。 从专业讲师的市场解析，到助理团队的沟通与服务承接，每一个环节都围绕“专业输出与服务体验”协同运作， 让投资者在理解市场的同时，也建立对团队的长期信任。",
-    tm1_role: "Lead Mentor",
-    tm1_h: "首席讲师 / 首席导师",
-    tm1_p:
-      "Stephanus Turangan 拥有超过 30 年印尼金融市场经验，长期深耕资本市场、机构业务与投资策略领域。 他的专业背景、区域经验与管理经历，能够为整个教学体系提供更强的市场逻辑支撑与专业背书。",
-    tm1_li1: "拥有印尼金融市场长期实战与管理经验",
-    tm1_li2: "负责课程主线、核心分析与高阶市场框架",
-    tm1_li3: "帮助学员建立更完整的投资认知与判断逻辑",
-    tm2_role: "Primary Assistant",
-    tm2_h: "主助理 / 客户经理",
-    tm2_p:
-      "Raina 负责客户接待、日常沟通、学习规划与后续跟进。她是客户进入体系后最先接触到的重要角色，负责把服务做得更细致、更顺畅、更有温度。",
-    tm2_li1: "负责主要客户对接与沟通安排",
-    tm2_li2: "协助新客户了解课程与学习路径",
-    tm2_li3: "增强社群陪伴感与服务连续性",
-    tm3_role: "Support Assistant",
-    tm3_h: "辅助助理 / 运营支持",
-    tm3_p:
-      "Fajar 负责协助日常运营、信息整理与学员支持，帮助整个服务流程保持流畅与高效，让客户在学习过程中获得更稳定的体验。",
-    tm3_li1: "负责辅助支持与学员问题处理",
-    tm3_li2: "帮助维持日常运营效率",
-    tm3_li3: "配合主助理完成服务闭环",
-    jr_tag: "Learning Journey",
-    jr_title: "结构清晰的学习与服务路径，稳定推进每一步成长",
-    jr_intro:
-      "我们以清晰的阶段划分与稳定的服务衔接，帮助每一位进入体系的学员，从认知建立到方法形成，逐步完成对市场的理解与应用。",
-    jr1_label: "Step 01",
-    jr1_t: "了解团队与体系",
-    jr1_p:
-      "在进入之初，先全面了解团队背景、研究方向与服务结构，建立对整体框架的清晰认知。",
-    jr2_label: "Step 02",
-    jr2_t: "专业对接与评估",
-    jr2_p:
-      "由助理团队进行初步沟通与情况了解，根据不同基础与目标，提供匹配的学习路径与安排。",
-    jr3_label: "Step 03",
-    jr3_t: "进入系统化学习",
-    jr3_p:
-      "围绕市场结构、分析逻辑与实战理解展开，由浅入深建立完整的投资认知与判断能力。",
-    jr4_label: "Step 04",
-    jr4_t: "持续跟进与深化",
-    jr4_p:
-      "通过讲师内容输出与团队支持，持续优化理解与方法，逐步形成稳定且可执行的交易思路。",
-    inst_title: "覆盖印尼股票交易、监管与资金体系的核心机构",
-    ct_tag: "Contact Our Team",
-    ct_title: "现在就和我们联系，开启你的印尼股票学习之路",
-    ct_body:
-      "如果你正在寻找一个更专业、更清晰、更值得信任的印尼股票教学平台， 欢迎直接联系我们的团队。无论你是刚开始了解市场，还是已经有一定基础， 我们都会根据你的情况，为你提供更合适的学习方向与沟通安排。",
-    ct_box_h: "官方沟通通道",
-    ct_box_p:
-      "所有沟通均由专业团队统一管理与响应，确保信息准确、服务稳定、沟通高效。 建议通过官方渠道直接对接，我们将为你提供清晰的学习方向与后续安排。",
-    ct_btn_wa: "WhatsApp 官方咨询通道",
-    ct_btn_mail: "📧 官方邮箱",
-    ft_line1:
-      "© 2026 ASEAN Capital Lab · Indonesia Investment Education Center",
-    ft_line2:
-      "Systematic Investment Education · Market-Based Approach · Research-Driven Insight · Long-Term Value Creation",
-  };
 
   /** @type {Record<string, string>} */
   var EN = {
@@ -165,7 +21,7 @@
     hero_intro:
       "Focused on the Indonesia stock market, we combine on-the-ground experience, a regional research framework, and a structured learning path to help investors build clear, actionable analysis and decision-making skills.",
     hero_b1:
-      "A proven teaching and service model that works for investors all regions",
+      "A proven teaching and service model that works for investors across all regions",
     hero_b2: "From fundamentals to practical understanding—step by step",
     hero_b3:
       "A clearly structured team model that keeps learning and communication efficient",
@@ -178,7 +34,7 @@
       "Mentors and assistants work in concert to keep communication smooth and learning continuous.",
     stat_gr_title: "Global Reach",
     stat_gr_desc:
-      "Serving investors all regions with cross-border communication and teaching experience.",
+      "Serving investors across all regions with cross-border communication and teaching experience.",
     stat_ls_title: "Learning System",
     stat_ls_desc:
       "A complete path from building awareness to forming repeatable methods.",
@@ -187,7 +43,7 @@
     about_title:
       "A systematic investment education and service framework for the Indonesia market",
     about_lead:
-      "Clarity in structure and professionalism in content allow investors to efficiently comprehend market trends, learning processes, and how we operate",
+      "Clarity in structure and professionalism in content allow investors to efficiently comprehend market trends, learning processes, and how we operate.",
     about_pos_title: "Who we are",
     about_pos_body:
       "Within the UOB ecosystem, we specialize in Indonesia equity education and investment literacy—combining local market experience with a regional research framework to build a systematic, actionable learning and analysis system.",
@@ -236,7 +92,7 @@
       "This page is not only about our team—it is the full service and learning framework we provide. Everything points to one goal: clarity on our scope, how we work, and how to collaborate—so decisions feel more grounded.",
     sv1no: "Service 01",
     sv1t: "Foundational literacy",
-    sv1p: "Experienced in providing investment education to clients of various ages, regions, and characters, with the ability to adapt communication style to be easy to understand and relevant to each participant. ",
+    sv1p: "Experienced in providing investment education to clients of various ages, regions, and backgrounds, adapting communication so it stays clear and relevant for each participant.",
     sv2no: "Service 02",
     sv2t: "Market insights and analysis",
     sv2p: "Combine market dynamics, themes, and company logic into content that is not just news—but a framework you can absorb.",
@@ -476,7 +332,6 @@
   };
 
   global.I18N_MESSAGES = {
-    zh: ZH_CN,
     en: EN,
     id: ID,
   };
