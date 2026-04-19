@@ -17,7 +17,7 @@
     hero_eyebrow:
       "Institutional Approach · Indonesia Equity Market · Research & Training",
     hero_title:
-      "Indonesia equity education and investment literacy for global investors",
+      "Indonesia Equity Education And Investment Literacy for Global Investors",
     hero_intro:
       "Focused on the Indonesia stock market, we combine on-the-ground experience, a regional research framework, and a structured learning path to help investors build clear, actionable analysis and decision-making skills.",
     hero_b1:
@@ -41,7 +41,7 @@
     video_nosupport: "Your browser does not support HTML5 video playback.",
     about_tag: "About Us",
     about_title:
-      "A systematic investment education and service framework for the Indonesia market",
+      "A Systematic Investment Education And Service Framework For The Indonesian Market.",
     about_lead:
       "Clarity in structure and professionalism in content allow investors to efficiently comprehend market trends, learning processes, and how we operate.",
     about_pos_title: "Who we are",
@@ -70,7 +70,7 @@
     about_a4s:
       "Help investors quickly understand team background, services, and how to work with us.",
     gs_tag: "Global Success",
-    gs_title: "Proven teaching and service success across multiple regions",
+    gs_title: "Proven Teaching And Service Success Across Multiple Regions.",
     gs_pre: "In one sentence: ",
     gs_em:
       "We understand markets—and we understand how to turn investment education into a trusted, accepted, and sustainably valuable service.",
@@ -87,7 +87,7 @@
       "Lasting trust is not only “talking markets well.” It is helping clients immediately sense professionalism, service quality, and team value—and choose to go deeper.",
     sv_tag: "Our Services",
     sv_title:
-      "A curriculum built around learning, understanding, analysis, and partnership",
+      "A Clear Path of Learning and Service and Steady Progress at Every Step.",
     sv_intro:
       "This page is not only about our team—it is the full service and learning framework we provide. Everything points to one goal: clarity on our scope, how we work, and how to collaborate—so decisions feel more grounded.",
     sv1no: "Service 01",
@@ -150,12 +150,13 @@
     jr4_p:
       "Through mentor output and team support, refine methods over time and form a stable, executable investment approach.",
     inst_title:
-      "Core institutions across Indonesia’s trading, supervision, and market infrastructure",
+      "Core Institutions Across Indonesian's Trading, Supervision, And Market Infrastructure.",
     ct_tag: "Contact Our Team",
-    ct_title: "Contact us now and start your Indonesia equity learning journey",
+    ct_title:
+      "Contact Us Now And Start Your Indonesian Equity Learning Journey.",
     ct_body:
       "If you are looking for a more professional, clearer, and more trustworthy Indonesia equity education platform, reach out directly. Whether you are just starting or already have experience, we will tailor direction and communication to your situation.",
-    ct_box_h: "Official channels",
+    ct_box_h: "Official Channels",
     ct_box_p:
       "All inquiries are managed by our professional team to ensure accuracy, stability, and efficiency. We recommend contacting us through official channels for clear next steps.",
     ct_btn_wa: "WhatsApp (official)",
