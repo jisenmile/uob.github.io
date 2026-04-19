@@ -460,17 +460,17 @@
     jr4_p:
       "Melalui konten mentor dan dukungan tim, menyempurnakan metode dari waktu ke waktu dan membentuk pendekatan investasi yang stabil dan dapat dieksekusi.",
     inst_title:
-      "Lembaga inti yang mencakup perdagangan, pengawasan, dan infrastruktur pasar modal Indonesia",
+      "Lembaga-Lembaga Inti Di Seluruh Infrastuktur Perdagangan, Pengawasan, Dan Pasar Indonesia.",
     ct_tag: "Hubungi Tim Kami",
     ct_title:
-      "Hubungi kami sekarang dan mulai perjalanan belajar saham Indonesia Anda",
+      "Hubungi Kami Sekarang Dan Mulailah Perjalanan Pembelajaran Kesetaraan Anda Di Indonesia.",
     ct_body:
       "Jika Anda mencari platform edukasi saham Indonesia yang lebih profesional, lebih jelas, dan lebih terpercaya, hubungi kami langsung. Baik Anda baru memulai maupun sudah berpengalaman, kami akan menyesuaikan arah dan komunikasi sesuai situasi Anda.",
-    ct_box_h: "Saluran resmi",
+    ct_box_h: "Saluran Resmi",
     ct_box_p:
       "Semua pertanyaan dikelola oleh tim profesional kami untuk memastikan akurasi, stabilitas, dan efisiensi. Kami menyarankan menghubungi melalui saluran resmi untuk langkah selanjutnya yang jelas.",
-    ct_btn_wa: "WhatsApp (resmi)",
-    ct_btn_mail: "Email resmi",
+    ct_btn_wa: "WhatsApp (Resmi)",
+    ct_btn_mail: "Email Resmi",
     ft_line1: "© 2026 ASEAN Capital Lab · Pusat Edukasi Investasi Indonesia",
     ft_line2:
       "Edukasi Investasi Sistematis · Pendekatan Berbasis Pasar · Wawasan Berbasis Riset · Penciptaan Nilai Jangka Panjang",
