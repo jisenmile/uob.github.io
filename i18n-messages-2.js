@@ -260,7 +260,7 @@
       "Owns the core curriculum, advanced analysis, and high-level market framework",
     tm1_li3: "Helps learners build complete investment literacy and judgment",
     tm2_role: "Primary Assistant",
-    tm2_h: "Lead Assistant / Client Manager",
+    tm2_h: "Lead Assistant / Vice Chief Instructor",
     tm2_p:
       "Raina handles onboarding, day-to-day communication, learning planning, and follow-ups. She is often the first touch after you join—making service smoother, warmer, and more attentive.",
     tm2_li1: "Primary client coordination and scheduling",
@@ -323,7 +323,7 @@
     hero_eyebrow:
       "Pendekatan Institusional · Pasar Ekuitas Indonesia · Riset & Pelatihan",
     hero_title:
-      "Pendidikan saham Indonesia dan literasi investasi untuk investor global",
+      "Pendidikan Ekuitas Dan Literasi Investasi Indonesia Untuk Investor Global",
     hero_intro:
       "Berfokus pada pasar saham Indonesia, kami menggabungkan pengalaman lapangan, kerangka riset regional, dan jalur pembelajaran terstruktur untuk membantu investor membangun analisis dan pengambilan keputusan yang jelas dan dapat dijalankan.",
     hero_b1:
@@ -348,7 +348,7 @@
     video_nosupport: "Browser Anda tidak mendukung pemutaran video HTML5.",
     about_tag: "Tentang Kami",
     about_title:
-      "Kerangka edukasi investasi dan layanan yang sistematis untuk pasar Indonesia",
+      "Kerangka Kerja Pendidikan Dan Layanan Investasi yang Sistematis untuk Pasar Indonesia.",
     about_lead:
       "Struktur yang jelas dan konten profesional membantu investor memahami logika pasar, jalur belajar, dan cara kami bekerja dengan cepat.",
     about_pos_title: "SIAPA KITA",
@@ -424,7 +424,7 @@
     tm1_li3:
       "Membantu peserta membangun literasi investasi dan penilaian yang utuh",
     tm2_role: "Asisten Utama",
-    tm2_h: "Asisten Utama / Manajer Klien",
+    tm2_h: "Asisten Utama / Wakil Instruktur Kepala",
     tm2_p:
       "Raina menangani onboarding, komunikasi harian, perencanaan belajar, dan tindak lanjut—sering menjadi sentuhan pertama setelah Anda bergabung—membuat layanan lebih lancar, hangat, dan perhatian.",
     tm2_li1: "Koordinasi utama klien dan penjadwalan",
