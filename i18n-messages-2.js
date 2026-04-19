@@ -376,7 +376,8 @@
     about_a4s:
       "Membantu investor memahami latar belakang tim, layanan, dan cara kerja sama dengan cepat.",
     gs_tag: "Sukses Global",
-    gs_title: "Bukti pengajaran dan layanan yang matang di berbagai wilayah",
+    gs_title:
+      "Terbukti Sukses Dalam Pengajaran Dan Pelayanan Di Berbagai Wilayah.",
     gs_pre: "Satu kalimat: ",
     gs_em:
       "Kami memahami pasar—dan kami memahami cara mengubah edukasi investasi menjadi layanan yang dipercaya, diterima, dan bernilai berkelanjutan.",
@@ -393,7 +394,7 @@
       "Kepercayaan jangka panjang bukan hanya “pandai berbicara tentang pasar.” Yang penting klien segera merasakan profesionalisme, kualitas layanan, dan nilai tim—dan memilih untuk mendalami.",
     sv_tag: "Layanan Kami",
     sv_title:
-      "Kurikulum yang dibangun dari belajar, memahami, menganalisis, dan pendampingan",
+      "Kurikulum Yang Dibangun Berdasarkan Pembelajaran, Pemahaman, Analisis, Dan Kemitraan.",
     sv_intro:
       "Halaman ini bukan hanya tentang tim—ini kerangka layanan dan pembelajaran lengkap kami. Semuanya mengarah pada satu tujuan: kejelasan tentang ruang lingkup, cara kerja, dan jalur kolaborasi—agar keputusan lebih mantap.",
     sv1no: "Layanan 01",
@@ -410,7 +411,7 @@
     sv4p: "Mentor, asisten utama, dan asisten pendukung bekerja sama agar setiap klien merasakan kontinuitas dan kepedulian.",
     tm_tag: "Tim Profesional",
     tm_title:
-      "Struktur tim profesional untuk model layanan yang stabil dan terpercaya",
+      "Struktur Tim Profesional Untuk Model Layanan Yang Stabil dan Terpercaya",
     tm_intro:
       "Struktur yang jelas dan peran yang eksplisit memastikan setiap investor mendapat dukungan yang stabil, berkelanjutan, dan berkualitas. Dari analisis pasar oleh mentor hingga komunikasi dan layanan oleh tim asisten, setiap langkah menyelaraskan output profesional dengan pengalaman—membangun kepercayaan jangka panjang sambil memahami pasar.",
     tm1_role: "Mentor Utama",
@@ -439,7 +440,7 @@
     tm3_li3: "Berkolaborasi dengan asisten utama untuk menutup siklus layanan",
     jr_tag: "Perjalanan Belajar",
     jr_title:
-      "Jalur belajar dan layanan yang jelas—kemajuan stabil di setiap langkah",
+      " Jalur Pembelajaran Dan Pelayanan Yang  Jelas Serta Kemajuan Yang Stabil Di Setiap Langkah",
     jr_intro:
       "Dengan fase yang jelas dan serah terima yang andal, kami membantu setiap peserta bergerak dari kesadaran menuju metode yang dapat diulang—dari memahami pasar hingga menerapkannya.",
     jr1_label: "Langkah 01",
