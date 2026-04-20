@@ -231,7 +231,7 @@
       "Lasting trust is not only “talking markets well.” It is helping clients immediately sense professionalism, service quality, and team value—and choose to go deeper.",
     sv_tag: "Our Services",
     sv_title:
-      "A Clear Path of Learning and Service and Steady Progress at Every Step.",
+      "A Curriculum Built Around Learning, Understanding, Analysis, And Partnership.",
     sv_intro:
       "This page is not only about our team—it is the full service and learning framework we provide. Everything points to one goal: clarity on our scope, how we work, and how to collaborate—so decisions feel more grounded.",
     sv1no: "Service 01",
