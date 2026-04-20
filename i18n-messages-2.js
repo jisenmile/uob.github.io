@@ -161,7 +161,7 @@
     hero_eyebrow:
       "Institutional Approach · Indonesia Equity Market · Research & Training",
     hero_title:
-      "Indonesia Equity Education And Investment Literacy for Global Investors",
+      "Indonesia Equity Education And Investment Literacy For Global Investors",
     hero_intro:
       "Focused on the Indonesia stock market, we combine on-the-ground experience, a regional research framework, and a structured learning path to help investors build clear, actionable analysis and decision-making skills.",
     hero_b1:
@@ -248,7 +248,7 @@
     sv4p: "Mentors, lead assistants, and support assistants work together so every client experiences continuity and care.",
     tm_tag: "Professional Team",
     tm_title:
-      "A professional team structure for a stable, trustworthy service model",
+      "A Professional Team Structure For A Stable, Trustworthy Service Model",
     tm_intro:
       "Clear structure and explicit roles ensure every investor receives stable, continuous, high-quality support. From mentor-led market analysis to assistant-led communication and service delivery, every step aligns professional output with experience—building long-term trust while understanding markets.",
     tm1_role: "Lead Mentor",
@@ -274,7 +274,8 @@
     tm3_li2: "Helps maintain day-to-day operational efficiency",
     tm3_li3: "Works with the lead assistant to close the service loop",
     jr_tag: "Learning Journey",
-    jr_title: "A clear learning and service path—steady progress at every step",
+    jr_title:
+      " A Clear Path Of Learning And Service And Steady Progress At Every Step.",
     jr_intro:
       "With clear phases and reliable handoffs, we help every learner move from awareness to repeatable methods—and from understanding markets to applying them.",
     jr1_label: "Step 01",
@@ -303,8 +304,8 @@
     ct_box_h: "Official Channels",
     ct_box_p:
       "All inquiries are managed by our professional team to ensure accuracy, stability, and efficiency. We recommend contacting us through official channels for clear next steps.",
-    ct_btn_wa: "WhatsApp (official)",
-    ct_btn_mail: "Official email",
+    ct_btn_wa: "WhatsApp (Official)",
+    ct_btn_mail: "Official Email",
     ft_line1:
       "© 2026 ASEAN Capital Lab · Indonesia Investment Education Center",
     ft_line2:
@@ -349,10 +350,10 @@
     video_nosupport: "Browser Anda tidak mendukung pemutaran video HTML5.",
     about_tag: "Tentang Kami",
     about_title:
-      "Kerangka Kerja Pendidikan Dan Layanan Investasi yang Sistematis untuk Pasar Indonesia.",
+      "Kerangka Kerja Pendidikan Dan Layanan Investasi Yang Sistematis Untuk Pasar Indonesia.",
     about_lead:
       "Struktur yang jelas dan konten profesional membantu investor memahami logika pasar, jalur belajar, dan cara kami bekerja dengan cepat.",
-    about_pos_title: "SIAPA KITA",
+    about_pos_title: "Siapa Kita",
     about_pos_body:
       "Dalam ekosistem UOB, kami fokus pada edukasi saham Indonesia dan pembentukan literasi investasi—menggabungkan pengalaman pasar lokal dengan kerangka riset regional untuk membangun sistem pembelajaran dan analisis yang sistematis dan dapat dijalankan.",
     about_f1t: "Dasar pasar",
@@ -364,7 +365,7 @@
     about_f3t: "Nilai jangka panjang",
     about_f3s:
       "Menekankan pembelajaran berkelanjutan dan peningkatan kapabilitas—bukan sekadar informasi jangka pendek.",
-    about_adv_title: "Kekuatan kami",
+    about_adv_title: "Kekuatan Kami",
     about_a1t: "Sistem pengajaran yang dapat direplikasi",
     about_a1s:
       "Alur pengajaran dan layanan terstruktur membentuk ritme belajar yang stabil dan berkelanjutan.",
@@ -412,7 +413,7 @@
     sv4p: "Mentor, asisten utama, dan asisten pendukung bekerja sama agar setiap klien merasakan kontinuitas dan kepedulian.",
     tm_tag: "Tim Profesional",
     tm_title:
-      "Struktur Tim Profesional Untuk Model Layanan Yang Stabil dan Terpercaya",
+      "Struktur Tim Profesional Untuk Model Layanan Yang Stabil Dan Terpercaya",
     tm_intro:
       "Struktur yang jelas dan peran yang eksplisit memastikan setiap investor mendapat dukungan yang stabil, berkelanjutan, dan berkualitas. Dari analisis pasar oleh mentor hingga komunikasi dan layanan oleh tim asisten, setiap langkah menyelaraskan output profesional dengan pengalaman—membangun kepercayaan jangka panjang sambil memahami pasar.",
     tm1_role: "Mentor Utama",
